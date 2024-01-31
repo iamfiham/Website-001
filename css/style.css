@@ -5,11 +5,11 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; 
+    /* font-family: 'Montserrat', sans-serif;  */
 }
 html{
     scroll-behavior: smooth;
-    background-color: rgb(228, 248, 248);
+    /* background-color: rgb(228, 248, 248); */
 }
 :root {
     /* colors */
@@ -24,12 +24,15 @@ html{
     --medium: 3.75rem;
     --normal: 1rem;
     --small: 0.85rem;
+
+    /* animation */
+    --x:0;
+    --y:0;
 }
 .container{
     width: min(97%,1300px);
-    height: 100dvh;
     margin-inline: auto;
-    background-color: white;
+    background-color: white;   
 }
 
 /* nav bar */
@@ -37,6 +40,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-block: 0.7rem;
+    
 }
 .profile-div{
     display: flex;
@@ -52,15 +57,14 @@ nav{
 }
 .profile-text{
     margin-left: 15px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--t-black);
 }
 .menu-div{
     display: flex;
     justify-content: end;
     align-items: center;
-    font-size: var(--small);
-    color: var(--t-black);
+   
  
 }
 .menu-list{
@@ -70,6 +74,8 @@ nav{
 }
 .menu-list a{
     margin-right: 60px;
+    color: var(--t-black);
+    font-size: var(--small);
 
 }
 .contact-button{
@@ -81,4 +87,39 @@ nav{
 .contact-button a{
     font-size: var(--small);
     color: white;
+}
+
+/* home section */
+.home-section{
+    align-items: center;
+    text-align: center;
+    margin-top: 3.7rem; 
+}
+.main-heading{
+font-size: var(--head);
+color: var(--t-black);
+font-weight: 300;
+letter-spacing: -3px;
+/* text-align: center; */
+
+}
+.main-heading span{
+    font-weight: 600;
+}
+.home-section p{
+    font-size: var(--normal);
+    color: var(--t-gray);
+    line-height: 20px;
+    margin-top: 20px;
+}
+.home-element{
+    background-image: url(/assets/thunder.svg);
+    background-size: cover;
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    margin-inline: auto;
+    margin-block: 4.7rem;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(var(--y)) rotateY(var(--x));
 }
