@@ -51,7 +51,7 @@ nav{
     width: 42px;
     height: 42px;
     background-color: rgb(37, 37, 37);
-    background-image: url(/assets/profile.png);
+    background-image: url(assets/profile.png);
     background-size: cover;
     border-radius: 20px;
 }
@@ -113,7 +113,7 @@ nav{
     margin-top: 20px;
 }
 .home-element{
-    background-image: url(/assets/thunder.svg);
+    background-image: url(assets/thunder.svg);
     background-size: cover;
     background-color: aqua;
     width: 250px;
