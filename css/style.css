@@ -96,11 +96,11 @@ nav{
     margin-top: 3.7rem; 
 }
 .main-heading{
-font-size: var(--head);
-color: var(--t-black);
-font-weight: 300;
-letter-spacing: -3px;
-/* text-align: center; */
+    font-size: var(--head);
+    color: var(--t-black);
+    font-weight: 300;
+    letter-spacing: -3px;
+    /* text-align: center; */
 
 }
 .main-heading span{
