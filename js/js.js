@@ -16,8 +16,8 @@ window.addEventListener("mousemove", (para) => {
   // console.log(vh);
   // console.log(vw);
 
-  let ox = Math.round(((x - vw / 2) / (vw / 2)) * 30);
-  let oy = Math.round(((y - vh / 2) / (vh / 2)) * -30);
+  let ox = Math.round(((x - vw / 2) / (vw / 2)) * 10);
+  let oy = Math.round(((y - vh / 2) / (vh / 2)) * -10);
 
   root.style.setProperty("--x", ox + "deg");
   root.style.setProperty("--y", oy + "deg");
