@@ -17,7 +17,7 @@ let tl = gsap.timeline({
 });
 tl.to(Box, {
   y: -150,
-  scale: 1.4,
+  scale: 1.1,
   autoAlpha: 0,
   duration: 0.5,
 });
