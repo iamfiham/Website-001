@@ -10,7 +10,7 @@ let tl = gsap.timeline({
     end: "100% 130px",
     scrub: 1,
     // scrub: false,
-    markers: true,
+    markers: false,
     // pin: true,
     toggleActions: "play reverse play reverse",
   },
