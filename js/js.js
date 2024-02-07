@@ -1,11 +1,5 @@
 const root = document.querySelector(":root");
 
-window.addEventListener("resize", () => {
-  console.log(element.getBoundingClientRect().top);
-  console.log(element.getBoundingClientRect().bottom);
-  console.log(element.getBoundingClientRect().height);
-});
-
 window.addEventListener("mousemove", (para) => {
   let x = para.clientX;
   let y = para.clientY;
