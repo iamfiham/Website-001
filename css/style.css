@@ -1,4 +1,6 @@
-* {
+*,
+::after,
+::before {
   margin: 0px;
   padding: 0px;
   /* color: var(--color-1); */
@@ -9,14 +11,16 @@
 }
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-white);
+  background-color: white;
 }
 :root {
   /* colors */
   --t-black: #1a202c;
   --t-gray: #425466;
   --bg-black: #111825;
-  --bg-blue: #0568fd;
+  /* --bg-blue: #2a7dfa; */
+  --bg-blue: #2454fe;
+  /* --bg-blue: #0568fd; */
   --blue-white: #f5f5f7;
   --bg-white: #eff0f0;
 
@@ -24,16 +28,18 @@ html {
   --head: 4.5rem;
   --medium: 3.75rem;
   --normal: 1rem;
-  --small: 0.9rem;
+  --small: 0.94rem;
 
   /* animation */
   --x: 0;
   --y: 0;
 }
 .container {
-  width: min(97%, 1500px);
+  width: min(97%, 1550px);
   margin-inline: auto;
-  background-color: var(--bg-white);
+}
+.section-margin {
+  margin-top: 4rem;
 }
 
 /* nav bar */
@@ -41,26 +47,41 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 1rem;
+  padding-block: 1.6rem;
 }
 .profile-div {
   display: flex;
   align-items: center;
+  align-self: flex-start;
 }
 .profile-logo {
-  width: calc(var(--small) * 2.8);
-  height: calc(var(--small) * 2.8);
-  background-color: rgb(37, 37, 37);
-  background-image: url("../assets/profile.png");
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("../assets/logo 1.png");
   background-size: cover;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  align-self: start;
 }
 .profile-text {
-  margin-left: var(--normal);
+  margin-left: 1.6rem;
   font-weight: 600;
   color: var(--t-black);
-  font-size: 1rem;
+  font-size: 1.4rem;
+  font-family: "Gloock", serif;
   /* font-weight: 500; */
+  position: relative;
+  /* background-color: yellow; */
+}
+.profile-text::after {
+  content: "";
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 3px;
+  background-color: var(--t-black);
+  position: absolute;
+  bottom: -0.13rem;
+  right: 0.0625rem;
 }
 .menu-div {
   display: flex;
@@ -81,7 +102,7 @@ nav {
 .menu-list li a {
   color: var(--t-black);
   font-size: var(--small);
-  font-weight: 400;
+  font-weight: 500;
 }
 .menu-list li a::before {
   content: "";
@@ -93,7 +114,7 @@ nav {
   transform: translateX(-50%);
   border-radius: 1px;
   background-color: var(--bg-blue);
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 .menu-list li a:hover {
   color: var(--bg-blue);
@@ -103,23 +124,23 @@ nav {
 }
 .contact-button {
   border: none;
-  padding: calc(var(--small) * 0.8) calc(var(--small) * 2);
+  padding: calc(var(--small) * 0.7) calc(var(--small) * 0.9);
   margin-left: calc(var(--small) * 2);
-  border-radius: 30px;
+  border-radius: 9px;
   background-color: var(--bg-blue);
   cursor: pointer;
   border: 1px solid var(--bg-blue);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   /* box-shadow: 0px 0px 30px rgb(5, 104, 253, 0.3); */
 }
 .contact-button a {
   font-size: var(--small);
   color: rgb(255, 255, 255);
-  font-weight: 500;
-  transition: all 0.1s ease;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 .contact-button:hover {
   background-color: transparent;
@@ -131,7 +152,6 @@ nav {
 /* home section */
 .home-section {
   text-align: center;
-  margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -140,21 +160,18 @@ nav {
 .main-heading {
   /* font-family: "Bebas Neue", sans-serif; */
   /* font-size: 6rem; */
-  font-weight: 400;
   font-size: var(--head);
   color: var(--t-black);
-  letter-spacing: -1.5px;
-  font-weight: 600;
+  letter-spacing: -2.3px;
+  font-weight: 800;
   line-height: 1;
   position: relative;
   z-index: 2;
-
-  /* position: relative; */
-  /* background-color: aqua; */
 }
 .main-heading span {
   color: var(--bg-blue);
-  filter: drop-shadow(0px 0px 30px rgb(5, 104, 253, 0.3));
+  filter: drop-shadow(0px 0px 70px rgb(36, 84, 254, 0.6))
+    drop-shadow(0px 0px 20px rgb(36, 84, 254, 0.25));
 }
 .main-heading i {
   content: "";
@@ -163,12 +180,9 @@ nav {
   top: 0px;
   left: -20px;
   color: var(--bg-blue);
-  /* transform: scale(-1, 1); */
   filter: blur(60px);
   animation: shake 4s ease infinite;
   z-index: 1;
-
-  /* background-color: yellow; */
 }
 
 .home-section p {
@@ -180,7 +194,6 @@ nav {
   font-weight: 500;
   position: relative;
   z-index: 3;
-  /* background-color: aqua; */
 }
 
 .animation-box {
@@ -237,6 +250,19 @@ nav {
   transform: translateZ(-9px);
 }
 
+.home-cards {
+  width: min(1350px, 97%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-inline: auto;
+  gap: 20px;
+  background-color: #f5f5f7;
+}
+.cards {
+  height: 200px;
+  background-color: yellow;
+}
+
 @keyframes shake {
   0% {
     transform: translate(0px, -10px) rotate(-10deg) scale(-1, 1);
@@ -251,6 +277,83 @@ nav {
   }
 }
 
-.second {
-  height: 100vh;
+/* another file */
+.main-card {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0px 18px 50px 10px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+.tab-bar {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 12px 13px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.tab-bar div {
+  width: 12px;
+  border-radius: 50%;
+  height: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  opacity: 1;
+}
+.tab-bar div:nth-of-type(1) {
+  background-color: yellow;
+  filter: drop-shadow(0px 0px 15px yellow) drop-shadow(0px 0px 7px yellow);
+}
+.tab-bar div:nth-of-type(2) {
+  background-color: var(--bg-blue);
+  filter: drop-shadow(0px 0px 15px blue) drop-shadow(0px 0px 7px blue);
+}
+.tab-bar div:nth-of-type(3) {
+  background-color: rgb(252, 122, 122);
+  filter: drop-shadow(0px 0px 15px rgb(252, 122, 122))
+    drop-shadow(0px 0px 7px rgb(252, 122, 122));
+}
+.tab-bar p {
+  color: white;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: 500;
+  /* background-color: #00ff22; */
+  padding: 3px 20px;
+  letter-spacing: 0.7px;
+  border-radius: 4px;
+  /* background: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%); */
+
+  background: linear-gradient(to bottom, rgb(53, 53, 53), rgb(40, 40, 40))
+      padding-box,
+    linear-gradient(to bottom, rgb(120, 120, 120) 0%, rgb(40, 40, 40) 60%)
+      border-box;
+  border: 0.5px solid transparent;
+}
+.tap-bar p::after {
+  position: absolute;
+  background-color: yellow;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-card {
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.tab-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
 }
