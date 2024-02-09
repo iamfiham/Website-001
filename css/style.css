@@ -49,12 +49,12 @@ nav {
   align-items: center;
   padding-block: 1.6rem;
 }
-.profile-div {
+/*.profile-div {
   display: flex;
   align-items: center;
   align-self: flex-start;
   gap: 0.5rem;
-}
+}*/
 .profile-logo {
   width: 25px;
   height: 25px;
