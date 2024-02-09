@@ -78,7 +78,7 @@ nav {
   content: "";
   width: 0.27rem;
   height: 0.27rem;
-  border-radius: 3px;
+  border-radius: 50%;
   background-color: var(--t-black);
   position: absolute;
   bottom: -0.09rem;
