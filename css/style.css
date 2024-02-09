@@ -188,8 +188,8 @@ nav {
 }
 .main-heading span {
   color: var(--bg-blue);
-  filter: drop-shadow(0px 0px 70px rgb(36, 84, 254, 0.5))
-    drop-shadow(0px 0px 20px rgb(36, 84, 254, 0.2));
+ /* filter: drop-shadow(0px 0px 70px rgb(36, 84, 254, 0.5))
+    drop-shadow(0px 0px 20px rgb(36, 84, 254, 0.2));*/
 }
 .main-heading i {
   content: "";
