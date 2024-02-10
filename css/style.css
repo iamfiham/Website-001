@@ -91,9 +91,7 @@ nav {
   gap: calc(var(--small) * 1);
   /* position: relative; */
 }
-.menu-list li {
-  /* padding-block: 6px; */
-}
+
 .menu-list li a {
   color: var(--t-black);
   font-size: var(--small);
@@ -139,7 +137,7 @@ nav {
   transition: all 0.2s ease;
   /* box-shadow: 0px 0px 30px rgb(5, 104, 253, 0.3); */
   background: linear-gradient(to bottom, var(--bg-blue), #0158ca) padding-box,
-    linear-gradient(to bottom, #d2e5ff 0%, #0158ca 70%) border-box;
+    linear-gradient(to bottom, #d2e5ff 0%, #0158ca 50%) border-box;
   border: 1.5px solid transparent;
 }
 .contact-button a {
@@ -188,7 +186,7 @@ nav {
 }
 .main-heading span {
   color: var(--bg-blue);
- /* filter: drop-shadow(0px 0px 70px rgb(36, 84, 254, 0.5))
+  /* filter: drop-shadow(0px 0px 70px rgb(36, 84, 254, 0.5))
     drop-shadow(0px 0px 20px rgb(36, 84, 254, 0.2));*/
 }
 .main-heading i {
@@ -325,16 +323,16 @@ nav {
 }
 .tab-bar div:nth-of-type(1) {
   background-color: yellow;
-  filter: drop-shadow(0px 0px 15px yellow) drop-shadow(0px 0px 7px yellow);
+  /* filter: drop-shadow(0px 0px 15px yellow) drop-shadow(0px 0px 7px yellow); */
 }
 .tab-bar div:nth-of-type(2) {
   background-color: var(--bg-blue);
-  filter: drop-shadow(0px 0px 15px blue) drop-shadow(0px 0px 7px blue);
+  /* filter: drop-shadow(0px 0px 15px blue) drop-shadow(0px 0px 7px blue); */
 }
 .tab-bar div:nth-of-type(3) {
   background-color: rgb(252, 122, 122);
-  filter: drop-shadow(0px 0px 15px rgb(252, 122, 122))
-    drop-shadow(0px 0px 7px rgb(252, 122, 122));
+  /* filter: drop-shadow(0px 0px 15px rgb(252, 122, 122))
+    drop-shadow(0px 0px 7px rgb(252, 122, 122)); */
 }
 .tab-bar p {
   color: rgb(255, 255, 255, 0.7);
