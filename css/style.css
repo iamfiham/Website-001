@@ -11,6 +11,10 @@
   /* font-family: "Rubik", sans-serif; */
   /* font-family: "Bebas Neue", sans-serif;  */
 }
+@font-face {
+  font-family: "pingpong";
+  src: url(/font/PingPong.otf);
+}
 
 html {
   scroll-behavior: smooth;
@@ -36,13 +40,15 @@ html {
   /* animation */
   --x: 0;
   --y: 0;
+
+  /* margin */
+  --para-margin: 2rem;
+  --content-margin: calc(var(--para-margin) * 2);
+  --section-margin: calc(var(--para-margin) * 4);
 }
 .container {
   width: min(97%, 1550px);
   margin-inline: auto;
-}
-.section-margin {
-  margin-top: 4rem;
 }
 
 /* nav bar */
@@ -50,7 +56,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 1.6rem;
+  /* padding-block: 1.6rem; */
+  padding-top: 1.6rem;
+  padding-inline: 1.6rem;
 }
 /*.profile-div {
   display: flex;
@@ -138,7 +146,7 @@ nav {
   align-items: center;
   transition: 0.4s ease;
   border: 1px solid var(--t-gray);
-  border-bottom: 3px solid var(--t-gray);
+  /* border-bottom: 2px solid var(--t-gray); */
 }
 .button a {
   font-size: var(--small);
@@ -149,7 +157,7 @@ nav {
 .button:hover {
   background-color: transparent;
   border: 1px solid var(--t-gray);
-  border-bottom: 3px solid var(--t-gray);
+  /* border-bottom: 2px solid var(--t-gray); */
 }
 .button:hover a {
   color: var(--bg-black);
@@ -162,11 +170,13 @@ nav {
   align-items: center;
   justify-content: start;
   flex-direction: column;
+  padding-block: var(--section-margin);
 }
 .main-heading {
-  font-family: "Bebas Neue", sans-serif;
+  /* font-family: "Bebas Neue", sans-serif; */
+  font-family: "pingpong";
   font-size: var(--head);
-  font-size: 8rem;
+  font-size: 10rem;
   color: var(--t-black);
   letter-spacing: -1.5px;
   font-weight: 700;
@@ -175,7 +185,8 @@ nav {
   z-index: 2;
 }
 .main-heading span {
-  font-family: "Bebas Neue", sans-serif;
+  /* font-family: "Bebas Neue", sans-serif; */
+  font-family: "pingpong";
   /* color: transparent;
   -webkit-text-stroke: 1px var(--t-black); */
 }
@@ -195,8 +206,8 @@ nav {
   font-size: var(--normal);
   color: var(--t-gray);
   line-height: 1.5;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: var(--para-margin);
+  margin-bottom: var(--para-margin);
   font-weight: 400;
   position: relative;
   z-index: 3;
@@ -285,15 +296,20 @@ nav {
 }
 
 /* another file */
+.card-section {
+  background-color: var(--blue-white);
+  padding-block: var(--section-margin);
+  border-radius: 12px;
+}
 .main-card {
-  margin-top: 8rem;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 7px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.03); */
   height: 200px;
+  background-color: white;
 }
 .tab-bar {
   background-color: black;
@@ -355,7 +371,7 @@ nav {
 
 .about-section {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: var(--section-margin);
 }
 .about-section h3 {
   font-size: var(--medium);
