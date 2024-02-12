@@ -208,6 +208,7 @@ nav {
   line-height: 0.9;
   position: relative;
   z-index: 2;
+  background-color: yellow;
 }
 .main-heading span {
   /* font-family: "Bebas Neue", sans-serif; */
