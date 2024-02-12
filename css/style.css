@@ -12,8 +12,16 @@
   /* font-family: "Bebas Neue", sans-serif;  */
 }
 @font-face {
-  font-family: "pingpong";
-  src: url(/font/PingPong.otf);
+  font-family: "pingpongregular";
+  src: url("/font/PingPongRegular.eot");
+  src: url("/font/PingPongRegular.eot?#iefix") format("embedded-opentype"),
+    url("/font/PingPongRegular.woff2") format("woff2"),
+    url("/font/PingPongRegular.woff") format("woff"),
+    url("/font/PingPongRegular.ttf") format("truetype"),
+    url("/font/PingPongRegular.svg#PingPongRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -49,6 +57,22 @@ html {
 .container {
   width: min(97%, 1550px);
   margin-inline: auto;
+}
+#cursor {
+  width: 75px;
+  height: 75px;
+  pointer-events: none;
+  border: 2px solid var(--bg-black);
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: 200px;
+  scale: 0;
+  /* transform: translate(-50%, -50%); */
+  /* transform-origin: 50% 50%; */
+  transition: scale 0.25s ease;
+  background-color: var(--blue-white);
+  z-index: 10;
 }
 
 /* nav bar */
@@ -107,6 +131,7 @@ nav {
   color: var(--t-black);
   font-size: var(--small);
   font-weight: 300;
+  /* font-weight: light; */
   padding: calc(var(--small) * 0.6) calc(var(--small) * 0.9);
   border-radius: 20px;
   border: 1px solid white;
@@ -145,13 +170,13 @@ nav {
   justify-content: center;
   align-items: center;
   transition: 0.4s ease;
-  border: 1px solid var(--t-gray);
+  border: 1px solid var(--bg-black);
   /* border-bottom: 2px solid var(--t-gray); */
 }
 .button a {
   font-size: var(--small);
   color: rgb(255, 255, 255, 0.95);
-  font-weight: 400;
+  font-weight: 500;
   transition: all 0.4s ease;
 }
 .button:hover {
@@ -174,7 +199,7 @@ nav {
 }
 .main-heading {
   /* font-family: "Bebas Neue", sans-serif; */
-  font-family: "pingpong";
+  font-family: "pingpongregular";
   font-size: var(--head);
   font-size: 10rem;
   color: var(--t-black);
@@ -186,7 +211,7 @@ nav {
 }
 .main-heading span {
   /* font-family: "Bebas Neue", sans-serif; */
-  font-family: "pingpong";
+  font-family: "pingpongregular";
   /* color: transparent;
   -webkit-text-stroke: 1px var(--t-black); */
 }
@@ -208,91 +233,10 @@ nav {
   line-height: 1.5;
   margin-top: var(--para-margin);
   margin-bottom: var(--para-margin);
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
   z-index: 3;
   width: 600px;
-}
-
-.animation-box {
-  width: calc(1416px / 4);
-  height: calc(708px / 4);
-  position: relative;
-  margin-inline: auto;
-  transform-style: preserve-3d;
-  transform: perspective(1800px) rotateX(var(--y)) rotateY(var(--x));
-  z-index: 10;
-  background-color: transparent;
-}
-.ani {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(92, 92, 92);
-  /* border-block: 1px solid rgb(119, 119, 119); */
-  border: 2px solid rgb(120, 120, 120);
-  border-radius: 10px;
-}
-.animation-box div:nth-child(1) {
-  background-image: url(../assets/mainpic.png);
-  /* background-color: rgb(10, 10, 10); */
-  transform: translateZ(0px);
-  background-size: cover;
-  border: 2px solid rgb(120, 120, 120);
-}
-.animation-box div:nth-child(2) {
-  transform: translateZ(-1px);
-}
-.animation-box div:nth-child(3) {
-  transform: translateZ(-2px);
-}
-.animation-box div:nth-child(4) {
-  transform: translateZ(-3px);
-}
-.animation-box div:nth-child(5) {
-  transform: translateZ(-4px);
-}
-.animation-box div:nth-child(6) {
-  transform: translateZ(-5px);
-}
-.animation-box div:nth-child(7) {
-  transform: translateZ(-6px);
-}
-.animation-box div:nth-child(8) {
-  transform: translateZ(-7px);
-}
-.animation-box div:nth-child(9) {
-  transform: translateZ(-8px);
-}
-.animation-box div:nth-child(10) {
-  transform: translateZ(-9px);
-}
-
-.home-cards {
-  width: min(1350px, 97%);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-inline: auto;
-  gap: 20px;
-  background-color: #f5f5f7;
-}
-.cards {
-  height: 200px;
-  background-color: yellow;
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(0px, -10px) rotate(-10deg) scale(-1, 1);
-  }
-
-  50% {
-    transform: translate(0px, 10px) rotate(-30deg) scale(-1, 1);
-  }
-
-  100% {
-    transform: translate(0px, -10px) rotate(-10deg) scale(-1, 1);
-  }
 }
 
 /* another file */
@@ -315,17 +259,16 @@ nav {
   background-color: black;
   display: flex;
   align-items: center;
-  padding: 12px 13px;
+  padding: 13px 13px;
   justify-content: flex-start;
   position: relative;
 }
 
 .tab-bar div {
-  width: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  height: 12px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-right: 7.5px;
   opacity: 0.7;
 }
 .tab-bar div:nth-of-type(1) {
@@ -342,17 +285,17 @@ nav {
     drop-shadow(0px 0px 7px rgb(252, 122, 122)); */
 }
 .tab-bar p {
-  color: rgb(255, 255, 255, 0.7);
-  font-size: 0.75rem;
+  color: rgb(255, 255, 255, 0.9);
+  font-size: 0.7rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-weight: 400;
+  font-weight: 300;
   padding: 3px 20px;
   letter-spacing: 0.7px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, #383838 0%, #303030 100%);
+  border-radius: 12px;
+  /* background: linear-gradient(to bottom, #383838 0%, #303030 100%); */
 }
 
 /* background: linear-gradient(to bottom, rgb(53, 53, 53), rgb(40, 40, 40))
@@ -383,5 +326,5 @@ nav {
   font-size: var(--normal);
   color: var(--t-gray);
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 300;
 }
