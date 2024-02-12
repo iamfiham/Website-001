@@ -13,12 +13,12 @@
 }
 @font-face {
   font-family: "pingpongregular";
-  src: url("/font/PingPongRegular.eot");
-  src: url("/font/PingPongRegular.eot?#iefix") format("embedded-opentype"),
-    url("/font/PingPongRegular.woff2") format("woff2"),
-    url("/font/PingPongRegular.woff") format("woff"),
-    url("/font/PingPongRegular.ttf") format("truetype"),
-    url("/font/PingPongRegular.svg#PingPongRegular") format("svg");
+  src: url("../font/PingPongRegular.eot");
+  src: url("../font/PingPongRegular.eot?#iefix") format("embedded-opentype"),
+    url("../font/PingPongRegular.woff2") format("woff2"),
+    url("../font/PingPongRegular.woff") format("woff"),
+    url("../font/PingPongRegular.ttf") format("truetype"),
+    url("../font/PingPongRegular.svg#PingPongRegular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
