@@ -224,10 +224,11 @@ nav {
   line-height: 0.9;
   position: relative;
   z-index: 2;
-  padding-block: var(--para-margin);
+  margin-block: var(--para-margin);
   background: -webkit-linear-gradient(-45deg, #304980 0%, #fca311 150%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-color: yellow;
 }
 
 .home-section p {
