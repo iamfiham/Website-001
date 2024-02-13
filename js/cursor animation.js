@@ -30,9 +30,9 @@ window.addEventListener("mousemove", (e) => {
     cursorx < righthead
   ) {
     cursor.style.scale = "1";
-    body.style.cursor = "none";
+    // body.style.cursor = "none";
   } else {
     cursor.style.scale = "0";
-    body.style.cursor = "auto";
+    // body.style.cursor = "auto";
   }
 });
