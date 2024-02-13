@@ -6,11 +6,11 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: Box,
-    start: "0% 130px",
-    end: "150% 130px",
+    start: "0% 10%",
+    end: "100% 10%",
     scrub: 1,
     // scrub: false,
-    //  markers: true,
+    // markers: true,
     markers: false,
     // pin: true,
     toggleActions: "play reverse play reverse",

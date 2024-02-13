@@ -9,6 +9,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
+  /* width: calc(100vw - (100vw - 100%)); */
   /* font-family: "Rubik", sans-serif; */
   /* font-family: "Bebas Neue", sans-serif;  */
 }
@@ -78,10 +79,12 @@ html {
   /* z-index: 1; */
   top: 50%;
   left: 50%;
+  width: max-content;
   transform: translate(-50%, -50%);
 }
 
 /* SECTION nav bar */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -89,15 +92,20 @@ nav {
   /* padding-block: 1.6rem; */
   padding-top: 1.6rem;
   padding-inline: 1.6rem;
+  width: 100%;
+  /* position: relative; */
+  overflow: hidden;
 }
 .profile-text {
   font-weight: 500;
-  color: var(--t-black);
   font-size: 1.9rem;
   font-family: "Gloock", serif;
   /* font-weight: 500; */
   position: relative;
-  user-select: none;
+  cursor: pointer;
+}
+.profile-text a {
+  color: var(--t-black);
 }
 .profile-text::after {
   content: "";
@@ -171,7 +179,10 @@ nav {
   min-height: 100vh;
   margin-top: -3.75rem;
   padding-top: 3.75rem;
-  /* background-color: yellow; */
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
 }
 .home-section {
   text-align: center;
@@ -223,6 +234,7 @@ nav {
   color: var(--t-gray);
   line-height: 1.4;
   font-weight: 700;
+  cursor: pointer;
 }
 .home-section div {
   width: 25px;
@@ -335,4 +347,13 @@ nav {
   color: var(--t-gray);
   line-height: 1.5;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu-list {
+    visibility: hidden;
+  }
+  nav .button {
+    visibility: hidden;
+  }
 }
