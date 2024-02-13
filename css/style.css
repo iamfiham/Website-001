@@ -113,7 +113,6 @@ nav {
   /* font-weight: 500; */
   position: relative;
   user-select: none;
-  /* background-color: yellow; */
 }
 .profile-text::after {
   content: "";
@@ -196,24 +195,29 @@ nav {
 
 /* home section */
 .home {
+  /* height: 100dvh; */
   display: flex;
   align-items: center;
-  height: 100dvh;
   justify-content: center;
+  min-height: 100vh;
+  margin-top: -3.75rem;
+  padding-top: 3.75rem;
+  /* background-color: yellow; */
 }
 .home-section {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   padding-block: var(--content-margin);
 }
 .main-heading {
   /* font-family: "Bebas Neue", sans-serif; */
   font-family: "pingpongregular";
-  font-size: var(--head);
-  font-size: 10rem;
+  /* font-size: 10rem; */
+  /* font-size: clamp(5rem, 20vw, 10rem); */
+  font-size: clamp(1rem, 20vmin, 10rem);
   color: var(--t-black);
   letter-spacing: -1.5px;
   font-weight: 700;
@@ -225,12 +229,6 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.main-heading span {
-  /* font-family: "Bebas Neue", sans-serif; */
-  font-family: "pingpongregular";
-  /* color: transparent;
-  -webkit-text-stroke: 1px var(--t-black); */
-}
 
 .home-section p {
   font-size: var(--normal);
@@ -240,12 +238,15 @@ nav {
   font-weight: 300;
   position: relative;
   z-index: 3;
-  width: 600px;
+  width: min(90%, 600px);
 }
 .home-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 5.333vw, 1.5rem);
+  display: block;
+  width: 85%;
   color: var(--t-black);
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 700;
 }
 .home-section div {

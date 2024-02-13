@@ -1,119 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/common-css-style.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-    src="https://kit.fontawesome.com/dd480f8ca4.js"
-    crossorigin="anonymous"
-  ></script>
-    <title>Fiham Portfolio</title>
-  </head>
-  <body>
-    <!-- nav bar -->
-    <div class="home-nav">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/common-css-style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/dd480f8ca4.js" crossorigin="anonymous"></script>
+  <title>Fiham Portfolio</title>
+</head>
+
+<body>
+  <!--NAV nav bar -->
+  <div class="home-nav">
     <div id="cursor"><i class="fa-solid fa-laptop"></i></div>
     <nav>
       <div class="profile-div">
-        <!-- <div class="profile-logo">
-            <img src="/assets/profile.png" alt="" /> 
-        </div> -->
         <h5 class="profile-text">iamfiham</h5>
       </div>
+
       <ul class="menu-list">
         <li><a href="">Project</a></li>
         <li><a href="">Design</a></li>
         <li><a href="">About</a></li>
       </ul>
+      
       <button class="button">
         <a href="">Contact us</a>
       </button>
     </nav>
+
+    <!-- SECTION home section -->
+    
     <section class="container home">
-      <!-- home section -->
       <div class="home-section">
         <h3>👋, I'm Mohamed Fiham, a dedicated frontend developer.</h3>
         <h1 class="main-heading" id="gsap-box">
-          BUILD YOUR IDEAS:<br /><span>SIMPLE AND STUNNING</span>
-          <!-- <i class="fa-solid fa-wrench"></i> -->
+          BUILD YOUR IDEAS:<br />SIMPLE AND STUNNING
         </h1>
         <p>
           Sculpting stunning websites with React magic, blending the beauty of
           JSX, the simplicity of styled-components, and the mastery of
           JavaScript craftsmanship.
         </p>
-        <!-- <button class="button">
-          <a href="">Get started</a>
-        </button> -->
-        <div>
-          <div></div>
-        </div>
 
+       <a href=""> <div><div></div> </div> </a>
+      </div>
+  </section>
+
+  <!-- SECTION WEB CARD DESIGN -->
+  <section class="container">
+    <div class="card-section">
+      <div class="main-card">
+        <div class="tab-bar">
+          <div></div>
+          <div></div>
+          <div></div>
+          <p>iamfiham.github.io</p>
+        </div>
+        <div class="tab-card">
+          <p></p>
+        </div>
       </div>
     </div>
+
+
+
+    <!-- SECTION about  -->
+
+    <div class="about-section">
+      <h3>About me</h3>
+      <p>
+        Allow me to introduce myself: I'm Mohamed Fiham, a dedicated frontend
+        developer. My focus lies in mastering React and essential web
+        technologies like HTML, CSS, and JavaScript. Alongside React, I've
+        explored libraries like Redux, Axios, and React Router to enhance my
+        skills in building dynamic user interfaces. This journey has empowered
+        me to create interactive and responsive web applications with ease,
+        managing application state, handling asynchronous data fetching, and
+        facilitating seamless navigation within single-page applications.
+        Through hands-on experimentation and continual exploration, I've
+        cultivated a versatile skill set that enables me to tackle frontend
+        challenges with confidence and creativity.
+      </p>
+    </div>
   </section>
-  <section class="container">
-      <!-- another file -->
-      <div class="card-section">
-        <div class="main-card">
-          <div class="tab-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <p>iamfiham.github.io</p>
-          </div>
-          <div class="tab-card">
-            <p></p>
-          </div>
-        </div>
-      </div>
+  <!-- section end -->
+</body>
+<script src="js/js.js" defer></script>
+<script src="js/gsap.js" defer></script>
+<script src="js/cursor animation.js" defer></script>
 
-      <!-- home cards  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-      <div class="about-section">
-        <h3>About me</h3>
-        <p>
-          Allow me to introduce myself: I'm Mohamed Fiham, a dedicated frontend
-          developer. My focus lies in mastering React and essential web
-          technologies like HTML, CSS, and JavaScript. Alongside React, I've
-          explored libraries like Redux, Axios, and React Router to enhance my
-          skills in building dynamic user interfaces. This journey has empowered
-          me to create interactive and responsive web applications with ease,
-          managing application state, handling asynchronous data fetching, and
-          facilitating seamless navigation within single-page applications.
-          Through hands-on experimentation and continual exploration, I've
-          cultivated a versatile skill set that enables me to tackle frontend
-          challenges with confidence and creativity.
-        </p>
-      </div>
-    </section>
-      <!-- section end -->
-  </body>
-  <script src="js/js.js" defer></script>
-  <script src="js/gsap.js" defer></script>
-  <script src="js/cursor animation.js" defer></script>
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </html>
