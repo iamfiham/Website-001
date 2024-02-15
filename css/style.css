@@ -47,6 +47,7 @@ html {
 .container {
   width: min(95%, 1550px);
   margin-inline: auto;
+  z-index: 1;
 }
 #cursor {
   width: 75px;
@@ -58,7 +59,8 @@ html {
   display: block;
   top: 200px;
   scale: 0;
-  transition: scale 0.25s ease, top 0.2s ease-in-out, left 0.2s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease, scale 0.25s ease, top 0.3s ease, left 0.3s ease;
   background-color: white;
   z-index: 10;
   display: flex;
@@ -69,14 +71,14 @@ html {
   color: var(--t-black);
   font-size: var(--normal);
 }
+
 .watermark-text {
   font-size: 37rem;
   display: block;
   position: absolute;
-  color: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.025);
   font-weight: 900;
   pointer-events: none;
-  /* z-index: 1; */
   top: 50%;
   left: 50%;
   width: max-content;
@@ -93,8 +95,8 @@ nav {
   padding-top: 1.6rem;
   padding-inline: 1.6rem;
   width: 100%;
-  /* position: relative; */
-  overflow: hidden;
+  z-index: 10;
+  overflow-x: hidden;
 }
 .profile-text {
   font-weight: 500;
@@ -172,16 +174,14 @@ nav {
 
 /* SECTION home section */
 .home {
-  /* height: 100dvh; */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  margin-top: -3.75rem;
-  padding-top: 3.75rem;
+  min-height: calc(100vh-60px) !important;
+  /* margin-top: -3.75rem;
+  padding-top: 3.75rem; */
   overflow: hidden;
   position: relative;
-  z-index: -1;
   width: 100%;
 }
 .home-section {
@@ -197,11 +197,11 @@ nav {
   cursor: pointer;
   font-size: clamp(4rem, 15vw, 7rem);
   color: var(--t-black);
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   font-weight: 900;
   line-height: 0.9;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   color: var(--t-black);
   margin-block: var(--para-margin);
   /* background: -webkit-linear-gradient(
@@ -223,7 +223,7 @@ nav {
   margin-bottom: var(--content-margin);
   font-weight: 300;
   position: relative;
-  z-index: 3;
+  /* z-index: 3; */
   width: min(90%, 600px);
 }
 .home-section h3 {

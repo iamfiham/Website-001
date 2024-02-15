@@ -29,10 +29,14 @@ window.addEventListener("mousemove", (e) => {
     lefthead < cursorx &&
     cursorx < righthead
   ) {
-    cursor.style.scale = "1";
+    circle.style.scale = "1";
+    circle.style.opacity = "1";
+
     // body.style.cursor = "none";
   } else {
-    cursor.style.scale = "0";
+    circle.style.scale = "0";
+    circle.style.opacity = "0";
+
     // body.style.cursor = "auto";
   }
 });
