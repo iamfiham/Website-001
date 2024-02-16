@@ -292,7 +292,7 @@ nav {
   color: var(--t-black);
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: var(--content-margin);
+  margin-bottom: var(--para-margin);
 }
 .about-text p {
   font-size: var(--normal);
