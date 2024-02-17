@@ -276,17 +276,22 @@ nav {
 
 /* SECTION about section */
 
+.about-bg {
+  /* background-color: var(--blue-white); */
+}
 .about-section {
-  /* background-color: rgb(255, 255, 123); */
+  /* background-color: yellow; */
   padding-block: var(--section-margin);
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
-  gap: calc(var(--content-margin) * 3 / 4);
+  gap: calc(var(--content-margin) * 3 / 4); */
   overflow: hidden;
 }
 .about-text {
   /* background-color: var(--blue-white); */
-  padding: var(--content-margin);
+  padding-inline: var(--content-margin);
+  padding-bottom: var(--content-margin);
+  /* background-color: yellow; */
 }
 .about-text h5 {
   color: var(--bg-blue);
@@ -299,6 +304,7 @@ nav {
 }
 .about-text h3 {
   font-size: var(--medium);
+  font-size: clamp(3rem, 13.33vw, 4rem);
   color: var(--t-black);
   line-height: 1;
   font-weight: 700;
@@ -313,22 +319,37 @@ nav {
   letter-spacing: 0.3px;
 }
 .about-card {
-  background-color: var(--blue-white);
-  padding: var(--content-margin);
+  padding-inline: var(--content-margin);
   display: grid;
-  place-content: center;
-  height: 500px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(var(--para-margin) / 4 * 3);
+  grid-auto-rows: 1fr;
+}
+.card {
+  background-color: var(--blue-white);
+  padding: var(--para-margin);
+}
+.card svg {
+  font-size: 2.5rem;
+  color: var(--t-black);
+}
+.card:first-child svg {
+  rotate: -45deg;
 }
 
-#rocket {
-  /* display: block;
-  transform: translate(500px, 500px); */
+.card h6 {
+  color: var(--t-black);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: var(--content-margin);
+  margin-bottom: calc(var(--para-margin) / 2);
+  line-height: 1;
 }
-#rocket svg {
-  width: 300px;
-  height: 300px;
-  rotate: 0deg;
-  color: #0068f1;
+.card p {
+  color: var(--t-gray);
+  font-size: var(--normal);
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 1000px) {
@@ -341,6 +362,26 @@ nav {
 }
 @media screen and (max-width: 470px) {
   .about-text {
-    padding: 1rem;
+    padding-inline: calc(var(--para-margin) / 1.5);
+  }
+}
+@media screen and (max-width: 1120px) {
+  .about-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 950px) {
+  .about-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 620px) {
+  .about-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 400px) {
+  .about-card {
+    padding-inline: var(--para-margin);
   }
 }
