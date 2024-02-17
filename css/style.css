@@ -332,6 +332,7 @@ nav {
 .card svg {
   font-size: 2.5rem;
   color: var(--t-black);
+  /* color: var(--bg-blue); */
 }
 .card:first-child svg {
   rotate: -45deg;

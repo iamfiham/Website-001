@@ -1,7 +1,6 @@
 const Box = document.getElementById("gsap-box");
 
 // SECTION heading
-let size = Box.getBoundingClientRect().top + "px";
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline({
@@ -23,6 +22,33 @@ tl.to(Box, {
   autoAlpha: 0,
   duration: 0.5,
   ease: "none",
+});
+
+// SECTION CARD
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: card,
+      start: "0% 80%",
+      end: "70% 10%",
+      // scrub: 1,
+      scrub: false,
+      // markers: true,
+      markers: false,
+      // pin: true,
+      toggleActions: "play none none reverse",
+    },
+  });
+  tl.from(card, {
+    y: 50,
+    // scale: 1.1,
+    autoAlpha: 0,
+    duration: 0.7,
+    ease: "power2.out",
+  });
 });
 
 // SECTION ROCKET
