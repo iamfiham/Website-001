@@ -50,6 +50,7 @@ html {
   width: min(95%, 1400px);
   margin-inline: auto;
   z-index: 1;
+  position: relative;
 }
 #cursor {
   width: 75px;
@@ -279,32 +280,49 @@ nav {
   /* background-color: rgb(255, 255, 123); */
   padding-block: var(--section-margin);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: calc(var(--content-margin) * 3 / 4);
-  position: relative;
   overflow: hidden;
 }
 .about-text {
-  /* background-color: antiquewhite; */
+  /* background-color: var(--blue-white); */
+  padding: var(--content-margin);
+}
+.about-text h5 {
+  color: var(--bg-blue);
+  margin-bottom: calc(var(--para-margin) / 2);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  opacity: 0.8;
+  /* line-height: 1.5; */
 }
 .about-text h3 {
   font-size: var(--medium);
   color: var(--t-black);
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 700;
   margin-bottom: var(--para-margin);
+  /* margin-bottom: var(--section-margin); */
 }
 .about-text p {
   font-size: var(--normal);
   color: var(--t-gray);
   line-height: 1.5;
   font-weight: 300;
-  max-width: 550px;
+  letter-spacing: 0.3px;
 }
 .about-card {
-  /* background-color: aqua; */
+  background-color: var(--blue-white);
+  padding: var(--content-margin);
   display: grid;
   place-content: center;
+  height: 500px;
+}
+
+#rocket {
+  /* display: block;
+  transform: translate(500px, 500px); */
 }
 #rocket svg {
   width: 300px;
@@ -319,5 +337,10 @@ nav {
   }
   nav .button {
     visibility: hidden;
+  }
+}
+@media screen and (max-width: 470px) {
+  .about-text {
+    padding: 1rem;
   }
 }

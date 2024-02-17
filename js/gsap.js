@@ -26,31 +26,37 @@ tl.to(Box, {
 });
 
 // SECTION ROCKET
-const rocket = document.getElementById("rocket");
-const container = document.getElementById("container");
+// const rocket = document.getElementById("rocket");
+// const container = document.getElementById("container");
 
-let tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: rocket,
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 2,
-    // markers: true,
-    markers: false,
-  },
-});
-tl2.to(rocket, {
-  x: () => {
-    return (
-      container.getBoundingClientRect().width -
-      rocket.getBoundingClientRect().width
-    );
-  },
-});
+// let tl2 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: rocket,
+//     start: "top bottom",
+//     end: "bottom 80%",
+//     scrub: 2,
+//     markers: true,
+//   },
+// });
+// tl2.to(rocket, {
+//   x: () => {
+//     return (
+//       -1 *
+//       (container.getBoundingClientRect().width -
+//         rocket.getBoundingClientRect().width)
+//     );
+//   },
+//   y: () => {
+//     return (
+//       -1 * container.getBoundingClientRect().width -
+//       rocket.getBoundingClientRect().width
+//     );
+//   },
+// });
 
-window.addEventListener("resize", () => {
-  let progress = tl2.totalProgress();
-  tl2.progress(0);
-  tl2.invalidate();
-  tl2.totalProgress(progress);
-});
+// window.addEventListener("resize", () => {
+//   let progress = tl2.totalProgress();
+//   tl2.progress(0);
+//   tl2.invalidate();
+//   tl2.totalProgress(progress);
+// });
