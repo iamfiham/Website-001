@@ -326,8 +326,9 @@ nav {
   grid-auto-rows: 1fr;
 }
 .card {
-  background-color: var(--blue-white);
+/*  background-color: var(--blue-white);*/
   padding: var(--para-margin);
+  border: 1px solid var(--t-gray);
 }
 .card svg {
   font-size: 2.5rem;
