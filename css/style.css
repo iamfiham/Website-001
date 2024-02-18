@@ -372,6 +372,105 @@ nav {
   font-weight: 300;
   line-height: 1.5;
 }
+/* SECTION CONTACT */
+
+.contact-section {
+  padding-block: var(--section-margin);
+  padding-inline: var(--content-margin);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--content-margin);
+}
+
+.contact-text h5 {
+  color: var(--bg-blue);
+  margin-bottom: calc(var(--para-margin) / 2);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  opacity: 0.8;
+}
+.contact-text h1 {
+  font-size: var(--medium);
+  font-size: clamp(3rem, 13.33vw, 4rem);
+  color: var(--t-black);
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: var(--para-margin);
+}
+.contact-text p {
+  font-size: var(--normal);
+  color: var(--t-gray);
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form :is(input, textarea) {
+  font-size: 1rem;
+  border: 1.75px solid rgb(222, 222, 222);
+  padding: calc(var(--para-margin) / 2) calc(var(--para-margin) / 1.5);
+  border-radius: 12px;
+  transition: border 0.25s ease;
+  outline: none;
+  color: var(--t-black);
+  position: relative;
+  width: 100%;
+}
+.contact-form :is(input, textarea):focus {
+  border: 1.75px solid var(--bg-black);
+}
+.contact-form span {
+  display: block;
+  position: relative;
+  margin-bottom: calc(var(--para-margin) / 1.5);
+}
+.contact-form span:nth-child(3) {
+  margin-bottom: var(--para-margin);
+}
+
+.contact-form span label {
+  position: absolute;
+  top: 1.875rem;
+  transform: translateY(-50%);
+  left: 2rem;
+  z-index: 2;
+  font-size: 0.9rem;
+  background-color: var(--bg-white);
+  color: rgb(156, 156, 156);
+  font-weight: 300;
+  pointer-events: none;
+  transition: top 0.2s ease;
+  padding-inline: 0.5rem;
+}
+:is(input, textarea):focus + label {
+  top: -0.875px;
+  color: var(--t-black);
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+.contact-form div {
+  display: flex;
+  justify-content: end;
+}
+.contact-form button {
+  margin-left: calc(var(--para-margin) / 2);
+}
+.contact-form button:nth-child(2) {
+  background-color: var(--bg-white);
+  border: 1px solid rgb(222, 222, 222);
+}
+.contact-form button:nth-child(2):hover {
+  border: 1px solid var(--bg-black);
+}
+.contact-form button:nth-child(2) a {
+  color: var(--t-black);
+}
 
 @media screen and (max-width: 1000px) {
   .menu-list {
