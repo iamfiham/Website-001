@@ -42,12 +42,12 @@ html {
   --y: 0;
 
   /* margin */
-  --para-margin: 2rem;
+  --para-margin: 2.5rem;
   --content-margin: calc(var(--para-margin) * 2);
   --section-margin: calc(var(--para-margin) * 4);
 }
 #container {
-  width: min(95%, 1400px);
+  width: min(97%, 1400px);
   margin-inline: auto;
   z-index: 1;
   position: relative;
@@ -314,7 +314,7 @@ nav {
 .about-text p {
   font-size: var(--normal);
   color: var(--t-gray);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 300;
   letter-spacing: 0.3px;
 }
@@ -326,30 +326,49 @@ nav {
   grid-auto-rows: 1fr;
 }
 .card {
-/*  background-color: var(--blue-white);*/
-  padding: var(--para-margin);
-  border: 1px solid var(--t-gray);
+  /*  background-color: var(--blue-white);*/
+  padding: 2.1rem;
+  border: 1.75px solid rgb(222, 222, 222);
+  border-radius: 12px;
+  transition: border 0.25s ease;
 }
+.card:hover {
+  border: 1.75px solid var(--bg-black);
+}
+.card:hover svg {
+  scale: 1.2;
+}
+
 .card svg {
   font-size: 2.5rem;
-  color: var(--t-black);
+  color: black;
+  transition: scale 0.25s ease;
   /* color: var(--bg-blue); */
+}
+.card:first-child {
+  background-color: var(--bg-black);
 }
 .card:first-child svg {
   rotate: -45deg;
+}
+.card:first-child :is(svg, h6, p) {
+  color: var(--bg-white);
+}
+.card:first-child p {
+  opacity: 0.78;
 }
 
 .card h6 {
   color: var(--t-black);
   font-size: 1.4rem;
   font-weight: 700;
-  margin-top: var(--content-margin);
-  margin-bottom: calc(var(--para-margin) / 2);
-  line-height: 1;
+  margin-top: 4.2rem;
+  margin-bottom: 1.05rem;
+  line-height: 1.2;
 }
 .card p {
   color: var(--t-gray);
-  font-size: var(--normal);
+  font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -367,23 +386,18 @@ nav {
     padding-inline: calc(var(--para-margin) / 1.5);
   }
 }
-@media screen and (max-width: 1120px) {
-  .about-card {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1150px) {
   .about-card {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 650px) {
   .about-card {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1400px) {
   .about-card {
-    padding-inline: var(--para-margin);
+    padding-inline: calc(var(--para-margin) / 2);
   }
 }
