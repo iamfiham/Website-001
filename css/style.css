@@ -6,6 +6,8 @@
   text-decoration: none;
   list-style-type: none;
   box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth !important;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -15,7 +17,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   /* background-color: white; */
   background-color: var(--bg-white);
 }
@@ -161,21 +163,19 @@ nav {
   align-items: center;
   transition: 0.4s ease;
   border: 1px solid var(--bg-black);
+  font-size: var(--small);
+  transition: all 0.4s ease;
+
+  color: rgb(255, 255, 255, 0.95);
   /* border-bottom: 2px solid var(--t-gray); */
 }
-.button a {
-  font-size: var(--small);
-  color: rgb(255, 255, 255, 0.95);
-  font-weight: 500;
-  transition: all 0.4s ease;
-}
+
 .button:hover {
   background-color: transparent;
   border: 1px solid var(--t-gray);
-  /* border-bottom: 2px solid var(--t-gray); */
-}
-.button:hover a {
   color: var(--bg-black);
+
+  /* border-bottom: 2px solid var(--t-gray); */
 }
 
 /* SECTION home section */
@@ -280,11 +280,7 @@ nav {
   /* background-color: var(--blue-white); */
 }
 .about-section {
-  /* background-color: yellow; */
   padding-block: var(--section-margin);
-  /* display: grid;
-  grid-template-columns: 1fr;
-  gap: calc(var(--content-margin) * 3 / 4); */
   overflow: hidden;
 }
 .about-text {
@@ -458,18 +454,18 @@ nav {
   display: flex;
   justify-content: end;
 }
-.contact-form button {
+.button-div button {
   margin-left: calc(var(--para-margin) / 2);
 }
-.contact-form button:nth-child(2) {
+.button-div a:nth-child(2) button {
   background-color: var(--bg-white);
+  color: var(--t-black);
   border: 1px solid rgb(222, 222, 222);
 }
-.contact-form button:nth-child(2):hover {
+.button-div a:nth-child(2) button:hover {
   border: 1px solid var(--bg-black);
 }
 .contact-form button:nth-child(2) a {
-  color: var(--t-black);
 }
 
 @media screen and (max-width: 1000px) {
