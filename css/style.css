@@ -282,10 +282,10 @@ nav {
 .about-section {
   padding-block: var(--section-margin);
   overflow: hidden;
+  padding-inline: var(--content-margin);
 }
 .about-text {
   /* background-color: var(--blue-white); */
-  padding-inline: var(--content-margin);
   padding-bottom: var(--content-margin);
   /* background-color: yellow; */
 }
@@ -315,7 +315,6 @@ nav {
   letter-spacing: 0.3px;
 }
 .about-card {
-  padding-inline: var(--content-margin);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: calc(var(--para-margin) / 4 * 3);
@@ -376,6 +375,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--content-margin);
+  overflow: hidden;
 }
 
 .contact-text h5 {
@@ -394,6 +394,7 @@ nav {
   font-weight: 700;
   margin-bottom: var(--para-margin);
 }
+
 .contact-text p {
   font-size: var(--normal);
   color: var(--t-gray);
@@ -448,7 +449,7 @@ nav {
 }
 .contact-form textarea {
   resize: vertical;
-  min-height: 160px;
+  min-height: 250px;
 }
 .contact-form div {
   display: flex;
@@ -465,8 +466,6 @@ nav {
 .button-div a:nth-child(2) button:hover {
   border: 1px solid var(--bg-black);
 }
-.contact-form button:nth-child(2) a {
-}
 
 @media screen and (max-width: 1000px) {
   .menu-list {
@@ -476,9 +475,15 @@ nav {
     visibility: hidden;
   }
 }
-@media screen and (max-width: 470px) {
-  .about-text {
-    padding-inline: calc(var(--para-margin) / 1.5);
+@media screen and (max-width: 1300px) {
+  .about-section {
+    padding-inline: 5vw;
+  }
+  .contact-section {
+    padding-inline: 5vw;
+  }
+  .home-section {
+    padding-inline: 5vw;
   }
 }
 @media screen and (max-width: 1150px) {
@@ -491,8 +496,8 @@ nav {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 1400px) {
-  .about-card {
-    padding-inline: calc(var(--para-margin) / 2);
+@media screen and (max-width: 900px) {
+  .contact-section {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
