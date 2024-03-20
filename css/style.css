@@ -65,10 +65,8 @@ html {
   top: 200px;
   scale: 0;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0, 0.95, 0.15, 0.98),
-    scale 0.5s cubic-bezier(0, 0.95, 0.15, 0.98),
-    top 3s cubic-bezier(0, 0.95, 0.15, 0.98),
-    left 3s cubic-bezier(0, 0.95, 0.15, 0.98);
+  transition: opacity 0.5s cubic-bezier(0, 0.95, 0.15, 0.98), scale 0.5s cubic-bezier(0, 0.95, 0.15, 0.98),
+    top 3s cubic-bezier(0, 0.95, 0.15, 0.98), left 3s cubic-bezier(0, 0.95, 0.15, 0.98);
   background-color: var(--bg-white);
   z-index: 10;
   display: flex;
@@ -183,9 +181,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh-60px) !important;
-  /* margin-top: -3.75rem;
-  padding-top: 3.75rem; */
+  min-width: calc(100vh-200px);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -204,7 +200,7 @@ nav {
   cursor: pointer;
   font-size: clamp(4rem, 15vw, 8rem);
   color: var(--t-black);
-  letter-spacing: -2px;
+  letter-spacing: -7px;
   font-weight: 800;
   line-height: 0.9;
   position: relative;
@@ -280,7 +276,9 @@ nav {
   /* background-color: var(--blue-white); */
 }
 .about-section {
-  padding-block: var(--section-margin);
+  /* padding-block: var(--section-margin); */
+  padding-bottom: var(--section-margin);
+  padding-top: var(--para-margin);
   overflow: hidden;
   padding-inline: var(--content-margin);
 }
@@ -370,7 +368,7 @@ nav {
 /* SECTION CONTACT */
 
 .contact-section {
-  padding-block: var(--section-margin);
+  padding-bottom: var(--section-margin);
   padding-inline: var(--content-margin);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -499,5 +497,10 @@ nav {
 @media screen and (max-width: 900px) {
   .contact-section {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (orientation: portrait) {
+  .home {
+    min-height: auto;
   }
 }
